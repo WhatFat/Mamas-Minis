@@ -1,0 +1,170 @@
+<!doctype html><html lang="hu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Mamas & Minis. Kismamaedzés, posztnatális tréning és funkcionális edzés."><title>Mamas & Minis — Most te következel.</title><style>.instagram{background:#fff;color:#101828;padding-block:clamp(30px,5vw,65px)}
+.ig-profile{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.ig-profile h2{font:650 17px/1.35 system-ui,sans-serif}
+.ig-profile p{font-size:13px}
+.ig-avatar{width:54px;height:54px;border-radius:50%;background:#dfcfc0;flex:none}
+.ig-follow{margin-left:auto;background:#155eef;color:#fff;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:650}
+.ig-slider{position:relative}
+.ig-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 20px)/3);gap:10px;overflow:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.ig-track::-webkit-scrollbar{display:none}
+.ig-post{aspect-ratio:1;background:#dfcfc0;scroll-snap-align:start}
+.ig-post:nth-child(even){background:#c7b7a7}
+.ig-slider button{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;border-radius:50%;background:#101828;color:#fff;font:27px/1 system-ui;cursor:pointer}
+.ig-slider button:disabled{opacity:.35;cursor:default}
+.ig-prev{left:8px}
+.ig-next{right:8px}
+
+:root{--paper:#ede3d8;--ink:#282119;--sand:#dfcfc0;--line:#a89786}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 Arial,Helvetica,sans-serif}
+h1,h2,h3,p{margin:0}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+.wrap{width:min(100% - 80px,1360px);margin-inline:auto}
+header{display:flex;align-items:center;justify-content:space-between;padding-block:22px;gap:20px}
+.logo{font-size:21px;font-weight:800;letter-spacing:-1px;line-height:1}
+.logo span{font-family:Georgia,serif;font-style:italic;font-weight:400}
+nav{display:flex;align-items:center;gap:30px;font-size:12px}
+.text-link{border-bottom:1px solid;padding-bottom:3px}
+.hero{border-top:1px solid var(--line);padding-top:25px}
+.micro{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+.hero-top{display:flex;justify-content:space-between}
+.hero h1{font-size:clamp(62px,11.6vw,170px);line-height:.88;letter-spacing:-.085em;font-weight:600;margin:32px 0 30px}
+.hero h1 em{font:italic 1.08em/.8 Georgia,serif;letter-spacing:-.075em}
+.hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end;margin-bottom:28px}
+.hero-bottom p{max-width:36ch;font-size:18px;line-height:1.4}
+.pill{display:inline-flex;gap:30px;align-items:center;justify-content:space-between;padding:14px 22px;border-radius:50px;background:var(--ink);color:var(--paper);font-size:12px;width:fit-content}
+.hero-bottom .pill{justify-self:end}
+.pill:hover{background:#514438}
+.image-slot{background:#c7b7a7}
+.hero-photo{height:clamp(240px,29vw,430px);background:#b7a593}
+.hero-caption{display:flex;justify-content:space-between;padding-block:12px;border-bottom:1px solid var(--line)}
+.intro{display:grid;grid-template-columns:1fr 2fr;gap:40px;padding-block:100px}
+.intro h2{font-size:clamp(29px,4vw,56px);letter-spacing:-.055em;line-height:1.14;font-weight:400;max-width:25ch}
+.intro p{max-width:51ch;margin-top:22px}
+.programs{background:var(--ink);color:var(--paper);padding-block:60px 70px}
+.program-heading{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:42px}
+.program-heading h2{font-size:clamp(40px,6vw,86px);line-height:1;letter-spacing:-.065em;font-weight:400}
+.program-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.program{border-top:1px solid #877565;padding-top:13px}
+.program .image-slot{aspect-ratio:1.2;margin:18px 0 21px}
+.program:nth-child(2){padding-top:13px;margin-top:65px}
+.program:nth-child(2) .image-slot{background:#b9aa9b}
+.program:nth-child(3){margin-top:130px}
+.program:nth-child(3) .image-slot{background:#ad9e90}
+.program h3{font-size:clamp(25px,3vw,42px);font-weight:400;letter-spacing:-.05em;line-height:1.05;margin-bottom:13px}
+.program p{font-size:14px;max-width:34ch;color:#dfcfc0}
+.program a{display:flex;justify-content:space-between;border-top:1px solid #877565;margin-top:24px;padding-top:12px;font-size:12px}
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,8vw,120px);padding-block:100px;align-items:center}
+.about-photo{aspect-ratio:.9;background:#b9a794}
+.about h2{font-size:clamp(42px,6vw,84px);line-height:1;letter-spacing:-.06em;font-weight:400;margin:19px 0 26px}
+.about h2 em{font-family:Georgia,serif;font-weight:400}
+.about .bio{max-width:43ch}
+.expertise{list-style:none;padding:0;margin:30px 0 0;border-top:1px solid var(--line)}
+.expertise li{padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}
+.join{background:var(--sand);padding-block:65px}
+.join-inner{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:end}
+.join h2{font-size:clamp(45px,8vw,112px);line-height:.94;letter-spacing:-.075em;font-weight:400;margin-top:20px}
+.join h2 em{font-family:Georgia,serif;font-weight:400}
+.join p{max-width:34ch;margin-bottom:20px}
+footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:28px}
+.footer-note{font-size:10px;letter-spacing:.12em}
+@media(max-width:780px){
+.wrap{width:calc(100% - 36px)}
+nav{gap:15px}
+.hero h1{font-size:clamp(54px,12.4vw,98px)}
+.intro{grid-template-columns:1fr;gap:20px;padding-block:56px}
+.program-grid{gap:16px}
+.program:nth-child(2){margin-top:35px}
+.program:nth-child(3){margin-top:70px}
+.about{padding-block:56px;gap:25px}
+}
+@media(max-width:580px){
+header{flex-wrap:wrap;padding-block:18px}nav{width:100%;justify-content:space-between}
+.hero-top .micro:last-child{display:none}
+.hero-bottom,.program-grid,.about,.join-inner{grid-template-columns:1fr}
+.hero-bottom .pill{justify-self:start}
+.hero-bottom p{font-size:16px}
+.program:nth-child(2),.program:nth-child(3){margin-top:18px}
+.program .image-slot{aspect-ratio:1.6}
+.programs{padding-block:38px}
+.program-heading{align-items:start;flex-direction:column;gap:10px;margin-bottom:25px}
+.about-photo{aspect-ratio:1.1}
+.join{padding-block:42px}
+footer{align-items:start;flex-direction:column}
+.ig-track{grid-auto-columns:calc((100% - 10px)/2)}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.expertise li{padding:0}
+.expertise a{display:grid;grid-template-columns:34px 1fr 22px;align-items:center;gap:10px;min-height:61px;padding:8px 2px}
+.expertise a:hover{background:#dfcfc0}
+.expertise-symbol{width:32px;height:32px}
+.expertise-arrow{font-size:22px;line-height:1;text-align:right}
+</style></head><body>
+<header class="wrap"><a href="#fooldal" class="logo">mamas<span>&</span>minis</a><nav aria-label="Főmenü"><a href="#programok">Edzések</a><a href="#fanni">Fanni</a><a href="#kezdes" class="text-link">Kezdjük el ↗</a></nav></header>
+<main id="fooldal">
+<section class="hero wrap">
+<div class="hero-top"><p class="micro">Női edzés. A te ritmusodban.</p><p class="micro">Mamas & Minis / Mozgás és közösség</p></div>
+<h1>Most te<br><em>következel.</em></h1>
+<div class="hero-bottom"><p>Egy kis idő magadra. Mozgás, ami belefér az életedbe. Várandósan, szülés után és később is.</p><a class="pill" href="#programok">Megnézem az edzéseket <span aria-hidden="true">↗</span></a></div>
+<div class="image-slot hero-photo" data-image="hero" aria-hidden="true"></div>
+<div class="hero-caption"><span class="micro">Erő. Figyelem. Közösség.</span><a class="micro" href="#szemlelet">Görgess tovább ↓</a></div>
+</section>
+<section class="intro wrap" id="szemlelet"><p class="micro">Helyet magadnak.</p><div><h2>Változik az életed.<br>Változhat az edzésed is.</h2><p>Van, amikor az erősödés a cél. Máskor az, hogy újra jólesően mozogj. Itt abból indulunk ki, ahol most tartasz — és onnan lépünk tovább.</p></div></section>
+<section class="programs" id="programok"><div class="wrap">
+<div class="program-heading"><h2>Melyik a te órád?</h2><p class="micro">Három kiindulópont.</p></div>
+<div class="program-grid">
+<article class="program"><p class="micro">01 / Várandósság alatt</p><div class="image-slot" data-image="kismama" aria-hidden="true"></div><h3>Ketten vagytok.<br>Te mozogsz.</h3><p>Kismamaedzés azoknak a hónapoknak a ritmusában, amikor napról napra változik a tested.</p><a href="#kezdes">Kismamaedzések <span aria-hidden="true">↗</span></a></article>
+<article class="program"><p class="micro">02 / Szülés után</p><div class="image-slot" data-image="posztnatalis" aria-hidden="true"></div><h3>Vissza a<br>saját ritmusodhoz.</h3><p>Posztnatális tréning figyelemmel a regenerációra, a törzsizmokra és a fokozatos visszatérésre.</p><a href="#kezdes">Posztnatális tréning <span aria-hidden="true">↗</span></a></article>
+<article class="program"><p class="micro">03 / Magadért</p><div class="image-slot" data-image="funkcionalis" aria-hidden="true"></div><h3>Erő a hétköz-<br>napokhoz.</h3><p>Funkcionális edzés, ahol az egész tested dolgozik. Erősítés és változatos mozgás, anyaságon innen és túl.</p><a href="#kezdes">Funkcionális edzés <span aria-hidden="true">↗</span></a></article>
+</div></div></section>
+<section class="about wrap" id="fanni"><div class="image-slot about-photo" data-image="portre" aria-hidden="true"></div><div><p class="micro">Aki melletted áll az edzésen</p><h2>Szia,<br><em>Fanni vagyok.</em></h2><p class="bio">Szeretném, hogy az edzés olyan része legyen a napodnak, amit vársz. Edzőként abban segítelek, hogy a mozgás a jelenlegi életszakaszodhoz és terhelhetőségedhez igazodjon.</p><ul class="expertise" aria-label="Szakterületek"><li><a href="/pre-es-posztnatalis-trening.html"><svg class="expertise-symbol" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21C6 9 17 5 24 9S32 23 24 25 12 22 13 15"/><path d="M17 10c-5 2-7 7-5 12"/></svg><span>Pre- és posztnatális tréning</span><span class="expertise-arrow" aria-hidden="true">↗</span></a></li><li><a href="/funkcionalis-edzes.html"><svg class="expertise-symbol" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 26 8-18 5 12 5-14M8 21h19"/><circle cx="25" cy="6" r="2"/></svg><span>Funkcionális edzés</span><span class="expertise-arrow" aria-hidden="true">↗</span></a></li><li><a href="/noi-mozgasprogramok.html"><svg class="expertise-symbol" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22c4 0 4-12 9-12s4 16 9 16 5-8 5-8M6 28c5 0 7-6 9-6"/><circle cx="15" cy="6" r="2"/></svg><span>Női mozgásprogramok</span><span class="expertise-arrow" aria-hidden="true">↗</span></a></li></ul></div></section>
+<section class="join" id="kezdes"><div class="wrap join-inner"><div><p class="micro">A következő lépés</p><h2>Kezdjük<br><em>veled.</em></h2></div><div><p>Találtál egy hozzád illő edzést? A következő lépés a jelentkezés.</p><span class="pill" aria-disabled="true">Jelentkezés hamarosan <span aria-hidden="true">↗</span></span></div></div></section>
+<section class="instagram" aria-labelledby="ig-heading">
+<div class="wrap">
+<div class="ig-profile">
+<div class="ig-avatar" data-image="instagram-profil" aria-hidden="true"></div>
+<div><h2 id="ig-heading">Mamas &amp; Minis</h2><p>Instagram</p></div>
+<span class="ig-follow" aria-disabled="true">Követés</span>
+</div>
+<div class="ig-slider">
+<div class="ig-track" tabindex="0" role="region" aria-label="Instagram bejegyzések helye">
+<div class="ig-post" data-image="instagram-1" aria-hidden="true"></div>
+<div class="ig-post" data-image="instagram-2" aria-hidden="true"></div>
+<div class="ig-post" data-image="instagram-3" aria-hidden="true"></div>
+<div class="ig-post" data-image="instagram-4" aria-hidden="true"></div>
+<div class="ig-post" data-image="instagram-5" aria-hidden="true"></div>
+<div class="ig-post" data-image="instagram-6" aria-hidden="true"></div>
+</div>
+<button class="ig-prev" type="button" aria-label="Előző kép">‹</button>
+<button class="ig-next" type="button" aria-label="Következő kép">›</button>
+</div>
+</div>
+</section></main><footer class="wrap"><a href="#fooldal" class="logo">mamas<span>&</span>minis</a><p class="footer-note">MOZGÁS · ERŐ · KÖZÖSSÉG</p></footer><script>
+const track = document.querySelector('.ig-track');
+const slide = track.firstElementChild;
+const previous = document.querySelector('.ig-prev');
+const next = document.querySelector('.ig-next');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
+function move(direction) {
+  const gap = parseFloat(getComputedStyle(track).columnGap);
+  track.scrollBy({
+    left: direction * (slide.offsetWidth + gap),
+    behavior: reducedMotion.matches ? 'instant' : 'smooth'
+  });
+}
+
+function updateControls() {
+  previous.disabled = track.scrollLeft <= 1;
+  next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+}
+
+previous.addEventListener('click', () => move(-1));
+next.addEventListener('click', () => move(1));
+track.addEventListener('scroll', updateControls, { passive: true });
+new ResizeObserver(updateControls).observe(track);
+updateControls();
+</script></body></html>
