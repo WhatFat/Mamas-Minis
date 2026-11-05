@@ -130,8 +130,12 @@ a.program-label:hover{color:#fff8ee;border-top-color:#ede3d8}
 .booking-contact p{margin-bottom:7px}
 .booking-contact a{display:inline-block}
 .booking-help summary:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
-</style></head><body>
-<header class="wrap"><a href="#fooldal" class="logo"><img class="brand-symbol" src="./assets/mamas-minis-symbol.png" alt="" width="48" height="48">mamas<span>&</span>minis</a><nav aria-label="Főmenü"><a href="#programok">Edzések</a><a href="#fanni">Fanni</a><a href="#kezdes" class="pill">Kezdjük el <span aria-hidden="true">↗</span></a></nav></header>
+.site-header{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line)}
+html{scroll-padding-top:110px}
+#top{scroll-margin-top:0}
+@media(max-width:580px){html{scroll-padding-top:150px}}
+</style></head><body id="top">
+<div class="site-header"><header class="wrap"><a href="#top" class="logo"><img class="brand-symbol" src="./assets/mamas-minis-symbol.png" alt="" width="48" height="48">mamas<span>&</span>minis</a><nav aria-label="Főmenü"><a href="#programok">Edzések</a><a href="#fanni">Fanni</a><a href="#kezdes" class="pill">Kezdjük el <span aria-hidden="true">↗</span></a></nav></header></div>
 <main id="fooldal">
 <section class="hero wrap">
 <div class="hero-top"><p class="micro">Női edzés. A te ritmusodban.</p><p class="micro">Mamas & Minis / Mozgás és közösség</p></div>
@@ -170,7 +174,7 @@ a.program-label:hover{color:#fff8ee;border-top-color:#ede3d8}
 <button class="ig-next" type="button" aria-label="Következő kép">›</button>
 </div>
 </div>
-</section></main><footer class="wrap"><a href="#fooldal" class="logo"><img class="brand-symbol" src="./assets/mamas-minis-symbol.png" alt="" width="48" height="48">mamas<span>&</span>minis</a><p class="footer-note">MOZGÁS · ERŐ · KÖZÖSSÉG</p></footer><script>
+</section></main><footer class="wrap"><a href="#top" class="logo"><img class="brand-symbol" src="./assets/mamas-minis-symbol.png" alt="" width="48" height="48">mamas<span>&</span>minis</a><p class="footer-note">MOZGÁS · ERŐ · KÖZÖSSÉG</p></footer><script>
 const track = document.querySelector('.ig-track');
 const slide = track.firstElementChild;
 const previous = document.querySelector('.ig-prev');
@@ -201,4 +205,15 @@ if (/Android/i.test(navigator.userAgent)) {
   const fallback = encodeURIComponent('https://sportmateclub.com/app/erdos-fanni-alakformalas-cross#tickets');
   bookingLink.href = 'intent://app.sportmateclub.com/smc-app/clubs/2585#Intent;scheme=https;package=com.rrapps.sportmate;S.browser_fallback_url=' + fallback + ';end';
 }
+</script><script>
+document.querySelectorAll('a.logo').forEach(function (logo) {
+  logo.addEventListener('click', function (event) {
+    const target = new URL(logo.href, location.href);
+    if (target.origin === location.origin && target.pathname === location.pathname) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+      history.replaceState(null, '', target.pathname + target.search + '#top');
+    }
+  });
+});
 </script></body></html>
